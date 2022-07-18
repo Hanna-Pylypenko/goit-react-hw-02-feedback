@@ -31,28 +31,29 @@ export class App extends Component {
         style={{
           height: '100vh',
           display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+          flexDirection: 'column',
+          justifyContent: 'flexStart',
+
           fontSize: 40,
           color: '#010101',
         }}
       >
-        <Section title="Please, leave your feedback" />
+        <Section title="Please, leave your feedback">
+          <FeedbackOptions
+            options={['good', 'neutral', 'bad']}
+            onLeaveFeedback={this.onFeedbackButtonClick}
+          />
+        </Section>
 
-        <FeedbackOptions
-          options={['good', 'neutral', 'bad']}
-          onLeaveFeedback={this.onFeedbackButtonClick}
-        />
-
-        <Section title="Statistics" />
-
-        <Statistics
-          good={this.state.good}
-          neutral={this.state.neutral}
-          bad={this.state.bad}
-          total={this.countTotalFeedback()}
-          positivePercentage={this.countPositiveFeedbackPercentage()}
-        />
+        <Section title="Statistics">
+          <Statistics
+            good={this.state.good}
+            neutral={this.state.neutral}
+            bad={this.state.bad}
+            total={this.countTotalFeedback()}
+            positivePercentage={this.countPositiveFeedbackPercentage()}
+          />
+        </Section>
       </div>
     );
   }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Notification } from 'components/Notification/Notification';
+import css from './Statistics.module.css';
 
 export const Statistics = ({
   good,
@@ -8,7 +10,7 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return total ? (
-    <ul>
+    <ul className={css.feedbackBtnList}>
       <li>Good:{good}</li>
       <li>Neutral:{neutral}</li>
       <li>Bad:{bad}</li>
@@ -16,6 +18,6 @@ export const Statistics = ({
       <li>Positive feedback:{positivePercentage}</li>
     </ul>
   ) : (
-    'There is no feedback'
+    <Notification message="There is no feedback" />
   );
 };

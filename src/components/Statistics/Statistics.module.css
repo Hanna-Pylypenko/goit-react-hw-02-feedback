@@ -1,0 +1,6 @@
+.feedbackBtnList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
