@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Hanna-Pylypenko/goit-react-hw-02-feedback/static/css/main.7209d317.css",
-    "main.js": "/Hanna-Pylypenko/goit-react-hw-02-feedback/static/js/main.56232c48.js",
+    "main.css": "/Hanna-Pylypenko/goit-react-hw-02-feedback/static/css/main.71793586.css",
+    "main.js": "/Hanna-Pylypenko/goit-react-hw-02-feedback/static/js/main.a9caac17.js",
     "index.html": "/Hanna-Pylypenko/goit-react-hw-02-feedback/index.html",
-    "main.7209d317.css.map": "/Hanna-Pylypenko/goit-react-hw-02-feedback/static/css/main.7209d317.css.map",
-    "main.56232c48.js.map": "/Hanna-Pylypenko/goit-react-hw-02-feedback/static/js/main.56232c48.js.map"
+    "main.71793586.css.map": "/Hanna-Pylypenko/goit-react-hw-02-feedback/static/css/main.71793586.css.map",
+    "main.a9caac17.js.map": "/Hanna-Pylypenko/goit-react-hw-02-feedback/static/js/main.a9caac17.js.map"
   },
   "entrypoints": [
-    "static/css/main.7209d317.css",
-    "static/js/main.56232c48.js"
+    "static/css/main.71793586.css",
+    "static/js/main.a9caac17.js"
   ]
 }
