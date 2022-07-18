@@ -21,7 +21,7 @@ export class App extends Component {
   };
   countPositiveFeedbackPercentage = () => {
     const positiveFeedbackPercentage =
-      Math.round((this.state.good / this.countTotalFeedback()) * 100) + '%';
+      Math.round(this.state.good / this.countTotalFeedback()) * 100;
     return positiveFeedbackPercentage;
   };
 
@@ -33,7 +33,7 @@ export class App extends Component {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flexStart',
-
+          padding: '20px',
           fontSize: 40,
           color: '#010101',
         }}
