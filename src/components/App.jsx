@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
+import { Notification } from './Notification/Notification';
 export class App extends Component {
   state = {
     good: 0,
@@ -20,9 +21,10 @@ export class App extends Component {
     return totalFeedback;
   };
   countPositiveFeedbackPercentage = () => {
-    const positiveFeedbackPercentage =
-      Math.round(this.state.good / this.countTotalFeedback()) * 100;
-    return positiveFeedbackPercentage;
+    const positivePercentage = Math.round(
+      (this.state.good / this.countTotalFeedback()) * 100
+    );
+    return positivePercentage;
   };
 
   render() {
@@ -40,19 +42,25 @@ export class App extends Component {
       >
         <Section title="Please, leave your feedback">
           <FeedbackOptions
-            options={['good', 'neutral', 'bad']}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.onFeedbackButtonClick}
           />
         </Section>
 
         <Section title="Statistics">
-          <Statistics
-            good={this.state.good}
-            neutral={this.state.neutral}
-            bad={this.state.bad}
-            total={this.countTotalFeedback()}
-            positivePercentage={this.countPositiveFeedbackPercentage()}
-          />
+          {this.state.good !== 0 ||
+          this.state.neutral !== 0 ||
+          this.state.bad !== 0 ? (
+            <Statistics
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage()}
+            />
+          ) : (
+            <Notification message="These is no statistics" />
+          )}
         </Section>
       </div>
     );
